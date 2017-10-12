@@ -3,14 +3,15 @@ Period Problem 3
 Three Digit Ascending and Descending Selection
 */
 
+// Libraries
 #include <iostream>
 #include <conio.h>
 #include <Windows.h>
 
-
+// Namespace
 using namespace std;
 
-
+// Voids
 void pause() {
 	cout << "Press any key to continue...";
 	while (!_kbhit());
@@ -28,7 +29,7 @@ void main() {
 	cout << "please. : ";
 	cin >> three_digit_number;
 
-
+	int usernumber;
 	int x = three_digit_number;
 	int A = x / 100;
 	int B = (x / 10) % 10;
@@ -46,7 +47,27 @@ void main() {
 	else {
 		cout << "Neither..." << endl;
 		Sleep(2000);
+		
 	}
 
+	for (int i = 1; i < 30; i++) {
+
+
+
+		if (A > B && B > C) {
+			cout << "Your number is descending..." << endl;
+
+		}
+		else if (A < B && B < C) {
+			cout << "Your number is ascending..." << endl;
+
+		}
+		else {
+			cout << "Your number is neither..." << endl;
+
+		}
+	}
+
+		
 	pause();
 }
